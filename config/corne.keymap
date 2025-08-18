@@ -26,16 +26,17 @@
                   &kp LALT &kp SPACE &mo 1   &mo 2 &kp RET &kp LGUI
                         >;
                 };
+
                 lower_layer {
 // -----------------------------------------------------------------------------------------
 // |  |   |  1 |  2   |  3  |  4  |  5  |   |  6  |  7   |  8  |  9  |  0  | BSPC |
-// | SHFT | BM | SUPR | PS  |     |     |   | LFT | DWN  |  UP | RGT |  ´  |   +  |
-// | CTRL |  < |      |     |     |     |   |     | RALT |  ?  |  ¡  |  {  |   }  |
+// | SHFT | BM | SUPR | PS  |  (  |  )  |   | LFT | DWN  |  UP | RGT |  ´  |   +  |
+// | CTRL |  < |   [  |  ]  |  {  |  }  |   |     | RALT |  ?  |  ¡  |  {  |   }  |
 //                    | ALT | SPC | MO1 |   | MO2 | ENT | GUI |
                         bindings = <
-   &kp GRAVE  &kp N1    &kp N2   &kp N3     &kp N4   &kp N5    &kp N6    &kp N7    &kp N8    &kp N9    &kp N0   &trans
-   &trans     &kp CAPS  &kp DEL  &kp PSCRN  &none    &none     &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &kp LBKT &kp RBKT
-   &trans     &kp NUBS  &trans   &trans     &kp SQT  &kp NUHS  &none     &kp RALT  &kp MINUS &kp EQUAL &kp SQT  &kp NUHS
+   &kp GRAVE  &kp N1    &kp N2      &kp N3       &kp N4       &kp N5     &kp N6    &kp N7    &kp N8    &kp N9    &kp N0   &trans
+   &trans     &kp CAPS  &kp DEL     &kp PSCRN    &kp LS(8)    &kp LS(9)  &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &kp LBKT &kp RBKT
+   &trans     &kp NUBS  &kp LS(SQT) &kp LS(NUHS) &kp SQT      &kp NUHS   &none     &kp RALT  &kp MINUS &kp EQUAL &kp SQT  &kp NUHS
                         &trans    &trans     &none    &none   &trans   &trans
                         >;
                 };
@@ -43,13 +44,13 @@
                 raise_layer {
 // -----------------------------------------------------------------------------------------
 // | F1   |  F2  |  F3  |  F4  |  F5  |  F6  |  F7  |  F8  |  F9  |  F10  |  F11  | BSPC |
-// |      |      |      |      |      |      |      |      |      |       |       | F12  |
-// | CTRL |      |      |      |      |      |      |      |      |       |       |      |
+// |      |   <  |  >   |   !  |  ?   |   =  |   +  |   "  |   %  |   &   |   /   | F12  |
+// | CTRL |      |      |   ¡  |  ¿   |   #  |   *  |   '  |      |       |   \   |   ~  |
 //                    | ALT | SPC | MO1 |   | MO2 | ENT | GUI |
                         bindings = <
-   &kp F1    &kp F2   &kp F3 &kp F4   &kp F5   &kp F6      &kp F7 &kp F8  &kp F9 &kp F10 &kp F11 &kp BSPC
-   &none  &none   &none  &none   &none   &none      &none &none &none  &none &none &kp F12
-   &trans &none   &none  &none   &none   &none      &none &none &none  &none &none &none
+   &kp F1 &kp F2   &kp F3          &kp F4        &kp F5        &kp F6        &kp F7       &kp F8     &kp F9    &kp F10   &kp F11       &kp BSPC
+   &none  &kp NUBS &kp LS(NUBS)    &kp LS(1)     &kp LS(MINUS) &kp LS(0)     &kp RBKT     &kp LS(2)  &kp LS(5) &kp LS(6) &kp LS(7)     &kp F12
+   &trans &none    &none           &kp LS(EQUAL) &kp EQUAL     &kp LS(3)     &kp LS(RBKT) &kp MINUS  &none     &none     &kp RA(MINUS) &kp RA(RBKT)
                                 &trans  &trans  &none   &none   &trans    &trans
                         >;
                 };
