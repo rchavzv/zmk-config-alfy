@@ -8,24 +8,42 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+#define WINDOWS 0
+#define MAC 1
+#define NUMBERS 2
+#define SPECIAL 3
+#define CONFIG 4
 
 / {
         keymap {
                 compatible = "zmk,keymap";
-
-                default_layer {
+                win_layer {
 // -----------------------------------------------------------------------------------------
 // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
 // | SHFT |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  Ñ  | ESC  |
 // | CTRL |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  -  | MO3  |
 //                    | ALT | SPC | MO1 |   | MO2 | ENT  | GUI |
                         bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &kp LSHFT &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp ESC
-   &kp LCTRL &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp SLASH &mo 3
-                  &kp LALT &kp SPACE &mo 1   &mo 2 &kp RET &kp LGUI
+   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P     &kp BSPC
+   &kp LSHFT &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI  &kp ESC
+   &kp LCTRL &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp SLASH &mo CONFIG
+            &kp LALT &kp SPACE &mo NUMBERS   &mo SPECIAL  &kp RET &kp LGUI
                         >;
                 };
+                mac_layer {
+// -----------------------------------------------------------------------------------------
+// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
+// | SHFT |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  Ñ  | ESC  |
+// | ALT  |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  -  | MO3  |
+//                    COMND | SPC | MO1 |   | MO2 | ENT  | CTRL|
+                        bindings = <
+   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P     &kp BSPC
+   &kp LSHFT &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI  &kp ESC
+   &kp LALT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp SLASH &mo CONFIG
+            &kp LGUI &kp SPACE &mo NUMBERS   &mo SPECIAL  &kp RET &kp LCTRL
+                        >;
+                };
+
 
                 lower_layer {
 // -----------------------------------------------------------------------------------------
@@ -62,9 +80,9 @@
 // |         |       |       |       |       |       |   |    |    |    |    |    |    |
 //                    | ALT | SPC | MO1 |   | MO2 | ENT | GUI |
                         bindings = <
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none &none &none &none &none &none
-   &none      &none        &none        &none        &none        &none        &none &none &none &none &none &none
-   &none      &none        &none        &none        &none        &none        &none &none &none &none &none &none
+   &tog MAC     &none  &none &none &none &none        &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none
+   &tog WINDOWS &none  &none &none &none &none        &none        &none        &none        &none        &none        &none
+   &none        &none  &none &none &none &bt BT_CLR   &none        &none        &none        &none        &none        &none
                                 &trans  &trans  &none   &none   &trans    &trans
                         >;
                 };
