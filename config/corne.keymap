@@ -77,7 +77,7 @@
 // -----------------------------------------------------------------------------------------
 // |  MAC  |    |    |    |    |         |   |  BT1  |  BT2  |  BT3  |  BT4  |  BT5  |    |
 // |       |    |    |    |    |         |   |  BDW  |  BUP  |  PREV | PAUSE |  NEXT |    |
-// |       |    |    |    |    |  BTCRL  |   |       |       |  MUTE |  VOL- |  VOL+ |    |
+// |       |    |    |    |    |  BTCRL  |   |       |       |  MUTE |  VDW |  VUP  |    |
 //                    | ALT | SPC | MO1 |   | MO2 | ENT | GUI |
                         bindings = <
    &tog MAC &none  &none &none &none &none        &bt BT_SEL 0  &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3  &bt BT_SEL 4  &none
