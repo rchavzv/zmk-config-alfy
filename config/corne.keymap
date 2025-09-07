@@ -34,13 +34,13 @@
 // -----------------------------------------------------------------------------------------
 // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
 // | SHFT |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  Ñ  | ESC  |
-// | ALT  |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  -  | MO3  |
-//                | GUI | SPC | NUMBERS |   | SPECIAL | ENT  | CTRL |
+// | GUI  |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  -  | MO3  |
+//                | ALT | SPC | NUMBERS |   | SPECIAL | ENT  | CTRL |
                         bindings = <
    &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P     &kp BSPC
    &kp LSHFT &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI  &kp ESC
-   &kp LALT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp SLASH  &mo CONFIG
-            &kp LGUI &kp SPACE &mo NUMBERS   &mo SPECIAL  &kp RET &kp LCTRL
+   &kp LGUI &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp SLASH  &mo CONFIG
+            &kp LALT &kp SPACE &mo NUMBERS   &mo SPECIAL  &kp RET &kp LCTRL
                         >;
                 };
 
